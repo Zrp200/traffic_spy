@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'traffic_spy/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "traffic_spy"
-  gem.version       = TrafficSpy::VERSION
-  gem.authors       = [""]
-  gem.email         = [""]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
-  gem.license       = "MIT"
+  gem.name          =	"traffic_spy"
+  gem.version  		=	TrafficSpy::VERSION
+  gem.author   		=	"Michael Dao"
+  gem.email         =	"michael.dao@gmail.com"
+  gem.description   =	%q{TODO: Write a gem description}
+  gem.summary       =	%q{TODO: Write a gem summary}
+  gem.homepage      =	""
+  gem.license       =	"MIT"
 
   gem.add_dependency "sinatra", "1.3.5"
   gem.add_dependency "sequel", "3.44.0"
