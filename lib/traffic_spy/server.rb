@@ -13,9 +13,7 @@ module TrafficSpy
   class Server < Sinatra::Base
     set :views, 'lib/views'
 
-    get '/' do
-      erb :index
-    end
+    get ?/ {erb :index}
 
     post '/sources' do
 
@@ -23,15 +21,13 @@ module TrafficSpy
         status 400
         body "Missing parameters"
       else
-        DB.from(:identifiers).insert(:identifier => params["identifier"], :rooturl => params["rootUrl"])
+        DB.from(:identifiers).insert identifier: params["identifier"], rooturl: params["rootUrl"]
         status 200
         body "Success"
       end
     end
 
-    not_found do
-      erb :error
-    end
+    not_found {erb :error}
   end
 
 end
